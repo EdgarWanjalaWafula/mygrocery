@@ -48,6 +48,39 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 body{
 	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+.primary-mygroceries-color, .static-landing-text span, .mg-benefits h3, .heading-text-last{
+	color:#00ab4b; 
+}
+
+.primary-mygroceries-bgcolor{
+	background-color:#00ab4b; 
+}
+
+.static-landing-text{
+	display:flex; 
+}
+
+.static-landing-text{
+	align-items:center; 
+}
+
+/*--------------------------------------------------------------
+# Header 
+--------------------------------------------------------------*/
+.site-header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	z-index:99; 
+}
+
+.custom-logo {
+	width: 85%;
+	height: auto;
 }
 
 /*--------------------------------------------------------------
@@ -56,4 +89,123 @@ body{
 .site-footer {
 	background: #000;
 	padding: 1rem;
+}
+
+/*--------------------------------------------------------------
+# Slider  
+--------------------------------------------------------------*/
+.slider-image {
+	height: 100vh;
+	object-fit: cover;
+}
+
+.static-landing-text span {
+	letter-spacing: 3px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.static-landing-text h1, .heading-text-last {
+	margin: 25px 0px;
+	font-size: 37px !important;
+	font-weight: 400;
+}
+
+.static-landing-text p {
+	line-height: 35px;
+	font-size: 20px;
+	text-align: justify;
+	width: 90%;
+}
+
+.slider-custom-control {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	left: 0;
+}
+
+.slider-custom-control span {
+	font-size: 32px;
+	background: #00ab4b;
+	color: #fff;
+	padding: 0px 15px;
+	margin: 0px 2px 0px 0px;
+	cursor: pointer;
+}
+
+.value-chains .nav-link {
+	color: #fff;
+	font-size: 20px;
+}
+
+.value-chains .nav span {
+	margin: 0px 15px 0px;
+}
+
+.heading-text-last {
+	font-weight: 800 !important;
+}
+
+.mg-value-chain {
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.mg-value-chain .card {
+	background: rgba(255,255,255,.8);
+	padding: 30px 40px 30px 50px;
+	margin: 5px 0px;
+}
+
+.mg-value-chain h4 {
+	margin: 0px 0px 16px;
+}
+
+.mg-value-chain .card {
+	background: rgba(255,255,255,.8);
+	padding: 30px 40px 30px 50px;
+	margin: 2px 0px;
+	transition-duration: 900ms;
+	cursor: pointer;
+}
+
+.mg-value-chain .card:hover {
+	transform: translateX(-100px);
+}
+
+.mg-value-chain .card::after {
+	position: absolute;
+	left: 100%;
+	bottom: 0;
+	content: '';
+	width: 360%;
+	background: rgba(255,255,255,.8);
+	top: 0;
+}
+
+.mg-padding {
+	padding: 6rem 6rem 6rem 0rem;
+}
+
+.mg-benefits .card .card-header {
+	background: #f8f9fa;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.mg-benefits h3 {
+	margin: 0px 0px 24px;
+}
+
+.mg-benefits .card .card-header h2::before {
+	content: "\f109";
+	position: absolute;
+	font-family: FontAwesome;
+	right: 0;
+}
+
+.benefits-bg{
+	background-position:right; 
+	background-size:cover; 
 }

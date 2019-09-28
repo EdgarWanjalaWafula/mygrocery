@@ -1,6 +1,6 @@
 /**
  * @author 	Edgar Wanjala Wafula 
- * @url 	http://giftedcommunitypwd.org.com
+ * @url 	  http://mygrocery.co.ke/
  * 
  * Website integration scripts
  */
@@ -8,29 +8,23 @@
 'use strict'
 
 jQuery(document).ready(function($){
-    initHomeSlider(); 
-    AOS.init({
-      duration: 2500,
-    });
-    initPreloaderTimeout(); 
-    
-    function initHomeSlider(){
-        var homeslider = $('.home-slider'); 
+	initHomeSlider(); 
+	initParralax(); 
+	lastHeadingText(); 
+	customNavigationInit(); 
 
-        homeslider.owlCarousel({
-			loop:false,
-            margin:0,
-            touchDrag : false,
-            mouseDrag : false, 
-            nav:false,
-            dots:true, 
-            autoplay: true,
-            autoplayTimeout: 10000,
-            smartSpeed: 2500,
-            navSpeed: 2500,
-            slideBy: 1,
-            animateOut: 'slideOutDown',
-            animateIn: 'fadeIn',
+
+
+	function initHomeSlider(){	
+		var homeslider = $('.landing-page-slider')
+		homeslider.owlCarousel({
+			loop:true,
+			margin:10,
+			nav:false,
+			dots:false, 
+			animateIn: 'slideInRight',			
+			animateOut: 'zoomOut',
+			autoplay:true, 
 			responsive:{
 				0:{
 					items:1
@@ -42,59 +36,41 @@ jQuery(document).ready(function($){
 					items:1
 				}
 			}
-        })
-        
-        homeslider.on('changed.owl.carousel', function(event) {
-            $(".owl-item h3").addClass("animated fadeInDown slow")
-            $(".owl-item.active").next().find("h3").addClass('animated fadeInDown slow')
-            $(".owl-item.active").next().find("p").addClass('animated fadeInDown slower delay-1s')
-        })
+		})
+	}
 
-        $(".home-services").owlCarousel({
-			loop:false,
-			margin:15,
-            nav:false,
-            dots:true, 
-            autoplay: false,
-            autoplayTimeout: 10000,
-            smartSpeed: 2500,
-            navSpeed: 2500,
-			responsive:{
-				0:{
-					items:1
-				},
-				600:{
-					items:1
-				},              
-				1000:{
-					items:3
-				}
+	function customNavigationInit(){
+		var homeslider = $('.landing-page-slider')
+		homeslider.owlCarousel();
+		
+		// Go to the next item
+		$('.ion-ios-arrow-round-forward').click(function() {
+			homeslider.trigger('next.owl.carousel');
+		})
+
+		// Go to the previous item
+		$('.ion-ios-arrow-round-back').click(function() {
+			// With optional speed parameter
+			// Parameters has to be in square bracket '[]'
+			homeslider.trigger('prev.owl.carousel', [3000]);
+		})
+	}
+
+	// Parallax properties
+	function initParralax(){
+		$(".parralax-window").parallax(
+			{
+				speed: .26
 			}
-        })
-    }
+		)
+	}
 
-    function initPreloaderTimeout(){
-    	setTimeout(function(){ 
-			$(".ij-preloader").fadeOut('slow'); 
-		}, 1200);
-    }
-}); 
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-// Get the navbar
-var navbar = document.getElementById("masthead");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("ij-sticky")
-  } else {
-    navbar.classList.remove("ij-sticky");
-  }
-} 
+	function lastHeadingText(){
+		var text 		= $(".heading-text").text();
+		var splitted 	= text.split(" ");
+		var lastWord 	= splitted.pop();
+		var newTxt 		= splitted.join(" ") + "<span class='heading-text-last'> " + lastWord + "</span>";
+		document.querySelector(".heading-text").innerHTML = newTxt; 
+	}
+});
 
