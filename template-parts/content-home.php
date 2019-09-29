@@ -18,6 +18,7 @@
                                 <span class="text-uppercase animated fadeInUp delay-1s slow d-block" ><?php echo $static_slider_text['static_text_tagline']; ?></span>
                                 <h1 class="heading-text animated fadeInUp delay-2s slow"><?php echo $static_slider_text['static_text_heading_']; ?></h1>
                                 <p class="animated fadeInUp delay-3s slow"><?php echo $static_slider_text['static_text_description']; ?></p>
+                                <a class="animated fadeInUp delay-4s slow" href="<?php echo home_url('contact-us'); ?>">Get in touch <i class="icon ion-ios-send"></i></a>
                             <?php 
                         endif; 
                     ?>

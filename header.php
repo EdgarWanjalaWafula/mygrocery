@@ -27,7 +27,15 @@
 			<div class="row">
 				<nav class="navbar navbar-expand-md w-100">
 					<!-- Site logo  -->
-					<?php the_custom_logo(''); ?>
+					<?php  
+						if(is_front_page()){
+							the_custom_logo();
+						} else {
+							?>
+								<a href="<?php echo home_url(); ?>"><img src="<?php echo wp_get_attachment_image_url('134', 'full'); ?>" alt="logo-white" class="custom-logo"> </a>
+							<?php 
+						}
+					?>
 
 					<!-- Toggle Button -->
 					<div class="toggle-container menu-drawer-button">

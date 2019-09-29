@@ -51,7 +51,7 @@ body{
 	overflow-x: hidden;
 }
 
-.primary-mygroceries-color, .static-landing-text span, .mg-benefits h3, .heading-text-last{
+.site-header .nav-link.active, .primary-mygroceries-color, .static-landing-text span, .mg-benefits h3, .heading-text-last, .page-title span {
 	color:#00ab4b; 
 }
 
@@ -59,7 +59,7 @@ body{
 	background-color:#00ab4b; 
 }
 
-.static-landing-text, .mg-benefits li, .value-chains ul li{
+.static-landing-text, .mg-benefits li, .value-chains ul li, .wpcf7-form, .contact-card{
 	display:flex; 
 }
 
@@ -77,6 +77,16 @@ body{
 	right: 0;
 	z-index:99; 
 	top:10px; 
+}
+
+.site-header .nav-link {
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+.home .nav-link{
+	color:#000; 
 }
 
 .custom-logo {
@@ -114,10 +124,10 @@ body{
 
 .static-landing-text p {
 	line-height: 35px;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: justify;
-	width: 90%;
 	font-weight: 400;
+	margin-bottom: 25px;
 }
 
 .slider-custom-control {
@@ -125,6 +135,17 @@ body{
 	bottom: 0;
 	z-index: 1;
 	left: 0;
+}
+
+.static-landing-text a {
+	margin: 16px 0px 0px;
+	font-size: 18px;
+	color: #00ab4b;
+	font-weight: 500;
+}
+
+.static-landing-text a i {
+	font-size: 19px;
 }
 
 .slider-custom-control span {
@@ -166,7 +187,7 @@ body{
 	background: rgba(255,255,255,.8);
 	padding: 30px 40px 30px 50px;
 	margin: 2px 0px;
-	transition-duration: 900ms;
+	transition-duration: 500ms !important;
 	cursor: pointer;
 }
 
@@ -254,7 +275,7 @@ a:hover, .btn-link:hover{
 	margin:5px 0px;
 }
 
-.nav-link.active::after {
+.value-chains .nav-link.active::after {
 	content: "\f0d9";
 	font-family: FontAwesome;
 	position: absolute;
@@ -270,4 +291,93 @@ a:hover, .btn-link:hover{
 
 .mg-padding-0{
 	padding:0px; 
+}
+
+/* Page Title */
+.page-title {
+	height:60vh;
+}
+
+.page-title::before {
+	position: absolute;
+	content: "";
+	height:100%;
+	width: 100%;
+	display: block;
+	z-index: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color:rgba(0,0,0,.8); 
+}
+
+.mg-section-padding{
+	padding: 6rem 0rem; 
+}
+
+.page-title h1 {
+	font-size: 35px;
+}
+
+.title-content{
+	margin: 0px 0px 35px;
+}
+
+.page-title span {
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+
+.wpcf7, .contact-card{
+	width: 100%;
+}
+
+.wpcf7 textarea {
+	height: 162px !important;
+}
+
+.wpcf7 .wpcf7-submit {
+	background: #00ab4b;
+	border-radius: 0px;
+	padding: 8px 30px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.contact-icon {
+	width:20%;
+}
+
+.contact-card {
+	box-shadow: 0px 0px 9px #0000004d;
+	align-items: center;
+	width: 100%;
+	padding: 24px;
+	margin: 0px 0px 15px;
+}
+
+.contact-icon i {
+	font-size: 16px;
+	border-radius: 50%;
+	background: rgba(0, 67, 29,.1);
+	height: 40px;
+	display: block;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.contact-content h6 {
+	margin: 0px 0px 10px;
+	font-weight: 600;
+}
+
+.contact-content p {
+	margin: 0px;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.wpcf7 input, .wpcf7 textarea{
+	border-radius: 0px; 
 }

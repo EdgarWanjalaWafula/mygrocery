@@ -39,6 +39,11 @@
         z-index:3;
     }
 
+    .static-landing-text h1, .heading-text-last {
+        margin: 16px 0px;
+        font-size: 26px !important;
+    }
+
 /*--------------------------------------------------------------
 #   Value-chains
 --------------------------------------------------------------*/
@@ -73,6 +78,10 @@
 
     .mg-benefits .mg-padding-0 {
         padding: 0px 15px;
+    }
+
+    .mg-section-padding {
+        padding: 2rem 0rem;
     }
    
 }
