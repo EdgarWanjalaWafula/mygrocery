@@ -1,112 +1,80 @@
 /* // Extra small devices (portrai phones, less than 576px) */
 @media (max-width: 575.98px) {
-    .mc-header .container {
-        border-radius: 0px;
-    } 
 
-    .toggle-container, .menu-drawer{
-        visibility: visible; 
+/*--------------------------------------------------------------
+#   Slider  
+--------------------------------------------------------------*/
+    .static-landing-text {
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
     }
 
-    .mc-padding {
-        padding: 35px 15px;
+    .heading-text-last, .static-landing-text{
+        color: #fff !important;
     }
 
-    .mc-our-story .row {
-        padding: initial;
+    .static-landing-text p {
+        font-size: 18px;
+        text-align: center;
     }
 
-    .site-title {
-        font-size: 35px;
-    }
-
-    .portfolio-thumb-list{
-        display: block;
-    }
-
-    /* Home */
-    .card-group > .card {
-        margin-bottom: 0px;
-    }
-
-    .service-img {
-        height: 430px;
-    }
-
-    .mc-services{
-        height: auto; 
-    }
-
-    .home-about, .home-about .owl-nav, .ofset-1, .our-portfolio .portfolio p, [class*="offset-"], .home-about a, .about-readmore{
-        margin:initial;
-    }
-
-    .mc-our-story .card-body, .home-services, .our-portfolio p{
-        padding:initial;
-    }
-
-    .single-services .col-md-4{
-        padding-left:15px; 
-    }
-
-    .mc-our-services .col-md-4{
-        padding: 60px;
-    }
-
-    .custom-nav {
-        left: -20px;
-    }
-
-    .clients .owl-nav {
-        position: initial;
-        top: initial;
-        transform: initial;
-        width: initial;
-    }
-
-    .clients .owl-nav .owl-prev {
-        position: initial;
-        left: initial;
-    }
-
-    .clients .owl-nav .owl-next {
-        position: initial;
-        right: initial;
-    }
-
-    .clients .owl-nav .owl-prev, .clients .owl-nav .owl-next {
-        top: initial;
-    }
-
-    .page-title .col-md-12 {
-        margin-left: 15px;
-    }
-
-    .mc-contact-details-nav.nav-fill .nav-item {
-        flex:unset;
-    }
-
-    .contact-details .nav-tabs .nav-link.active::before{
-        border-bottom: 4px solid #a29382;
-        left: 17px;
-        right: unset;
-        bottom: 3px;
-    }
-
-    .mc-footer .col {
-        flex-basis: unset;
-        flex-grow: unset;
+    .mygroceries-slider::before {
+        content: "";
+        position: absolute;
+        background: rgba(0,0,0,.7);
+        height: 100vh;
         width: 100%;
-        position: relative;
+        z-index: 2;
     }
 
-    .mc-footer h6 {
-        margin: 15px 0px 0px 0px;
+    .slider-custom-control {
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        text-align: center;
+        z-index:3;
     }
 
-    .core-values-tab .tab-pane {
-        margin: 15px;
+/*--------------------------------------------------------------
+#   Value-chains
+--------------------------------------------------------------*/
+    .value-chains .col-md-4 {
+        margin: unset;
+        z-index: 1;
     }
+
+    #v-pills-tab {
+        margin: 15px 0px;
+    }
+
+    .value-chains .tab-content {
+        padding: 16px;
+    }
+
+    .mg-value-chain .card:hover {
+        transform: translateX(-10px);
+    }
+
+    .mg-value-chain .card {
+        padding: 30px;
+    }
+
+    .mg-benefits .mg-padding {
+        padding: 30px 15px;
+    }
+
+    .mg-benefits [class*="offset-"]{
+        margin: unset; 
+    }
+
+    .mg-benefits .mg-padding-0 {
+        padding: 0px 15px;
+    }
+   
 }
 
 /* // Small devices (landscape phones, less than 768px) */

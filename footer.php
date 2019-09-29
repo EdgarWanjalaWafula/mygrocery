@@ -13,10 +13,13 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer text-white">
+	<footer id="colophon" class="site-footer text-white d-none">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 text-center">
+				<div class="col-md-6">
+
+				</div>
+				<div class="col-md-6 px-0">
 					<p class="m-0 small">Copyright &copy; <?php echo the_date('Y'); ?> My Grocery</p>
 				</div>
 			</div>

@@ -59,7 +59,7 @@ body{
 	background-color:#00ab4b; 
 }
 
-.static-landing-text{
+.static-landing-text, .mg-benefits li, .value-chains ul li{
 	display:flex; 
 }
 
@@ -76,10 +76,11 @@ body{
 	left: 0;
 	right: 0;
 	z-index:99; 
+	top:10px; 
 }
 
 .custom-logo {
-	width: 85%;
+	width: 65%;
 	height: auto;
 }
 
@@ -116,6 +117,7 @@ body{
 	font-size: 20px;
 	text-align: justify;
 	width: 90%;
+	font-weight: 400;
 }
 
 .slider-custom-control {
@@ -137,10 +139,7 @@ body{
 .value-chains .nav-link {
 	color: #fff;
 	font-size: 20px;
-}
-
-.value-chains .nav span {
-	margin: 0px 15px 0px;
+	font-weight: 500;
 }
 
 .heading-text-last {
@@ -160,6 +159,7 @@ body{
 
 .mg-value-chain h4 {
 	margin: 0px 0px 16px;
+	font-size: 20px;
 }
 
 .mg-value-chain .card {
@@ -189,23 +189,85 @@ body{
 }
 
 .mg-benefits .card .card-header {
-	background: #f8f9fa;
+	background: #f2f8e6;
 	border: 0px;
 	border-radius: 0px;
+	margin-bottom: 3px;
 }
 
-.mg-benefits h3 {
-	margin: 0px 0px 24px;
-}
-
-.mg-benefits .card .card-header h2::before {
-	content: "\f109";
-	position: absolute;
-	font-family: FontAwesome;
-	right: 0;
+.mg-benefits h3, .tab-content h3 {
+	margin: 0px 0px 35px;
 }
 
 .benefits-bg{
 	background-position:right; 
 	background-size:cover; 
+}
+
+.mg-benefits .card .card-header h2 span {
+	font-size: 24px;
+	margin: 0px 10px;
+}
+
+a:hover, .btn-link:hover{
+	text-decoration: none; 
+}
+
+.mg-benefits .card .card-header h2 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 500;
+	color: #000;
+}
+
+.btn-link.collapsed::before, .btn-link::before {
+	content: "\f107";
+	position: absolute;
+	font-family: FontAwesome;
+	right: 0;
+	font-size: 14px;
+}
+
+.btn-link::before {
+	content: "\f106";
+}
+
+.value-chains .tab-content {
+	padding:4.5rem;
+}
+
+.value-chains .tab-content span, .mg-benefits span {
+	margin: 0px 15px 0px 0px;
+}
+
+.value-chains .nav-pills .nav-link.active, .value-chains .nav-pills .show > .nav-link {
+	color: #fff;
+	background-color: transparent;
+}
+
+#v-pills-tab {
+	margin: 35px 0px 0px 16px;
+}
+
+.mg-benefits li, .value-chains .tab-content li{
+	margin:5px 0px;
+}
+
+.nav-link.active::after {
+	content: "\f0d9";
+	font-family: FontAwesome;
+	position: absolute;
+	right: -18px;
+	font-size: 40px;
+	top: -8px;
+}
+
+.value-chains .col-md-4 {
+	margin: 30px 0px -31px;
+	z-index: 1;
+}
+
+.mg-padding-0{
+	padding:0px; 
 }

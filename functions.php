@@ -120,14 +120,16 @@ add_action( 'widgets_init', 'mygroceries_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mygroceries_scripts() {
-	wp_enqueue_style( 'mygroceries-owl-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
+	wp_enqueue_style( 'mygroceries-owl-fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	wp_enqueue_style( 'mygroceries-owl-ionicons', 'https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css');
+	wp_enqueue_style( 'mygroceries-owl-aos', get_template_directory_uri() . '/css/aos.css');
 	wp_enqueue_style( 'mygroceries-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.min.css');
 	wp_enqueue_style( 'mygroceries-owl-theme', get_template_directory_uri() . '/css/owl.theme.default.min.css');
 	wp_enqueue_style( 'mygroceries-base-layout', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style( 'mygroceries-animate', get_template_directory_uri() . '/css/animate.css');
-	wp_enqueue_style( 'mygroceries-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
-	wp_enqueue_style( 'mygroceries-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'mygroceries-font', 'https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,800&display=swap');
+	wp_enqueue_style( 'mygroceries-style', get_stylesheet_uri() );	
+	wp_enqueue_style( 'mygroceries-mobile', get_template_directory_uri() . '/css/mobile.css');
 
 	// wp_enqueue_script( 'mygroceries-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'mygroceries-jquery', get_template_directory_uri() . '/js/jquery-3.4.1.min.js', array(), '', true );
@@ -135,6 +137,8 @@ function mygroceries_scripts() {
 	wp_enqueue_script( 'mygroceries-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );
 	wp_enqueue_script( 'mygroceries-owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '', true );
 	wp_enqueue_script( 'mygroceries-paralaxx', get_template_directory_uri() . '/js/parallax.min.js', array(), '', true );
+	wp_enqueue_script( 'mygroceries-aos', get_template_directory_uri() . '/js/aos.js', array(), '', true );
+	wp_enqueue_script( 'mygroceries-scrollax', get_template_directory_uri() . '/js/scrollax.min.js', array(), '', true );
 	wp_enqueue_script( 'mygroceries-custom-js', get_template_directory_uri() . '/js/main.js', array(), '', true );
 
 	wp_enqueue_script( 'mygroceries-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

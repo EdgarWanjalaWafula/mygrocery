@@ -12,8 +12,11 @@ jQuery(document).ready(function($){
 	initParralax(); 
 	lastHeadingText(); 
 	customNavigationInit(); 
-
-
+	toggleBenefitsIcon(); 
+	AOS.init({
+		duration: 2000,
+	});
+	$.Scrollax();
 
 	function initHomeSlider(){	
 		var homeslider = $('.landing-page-slider')
@@ -71,6 +74,18 @@ jQuery(document).ready(function($){
 		var lastWord 	= splitted.pop();
 		var newTxt 		= splitted.join(" ") + "<span class='heading-text-last'> " + lastWord + "</span>";
 		document.querySelector(".heading-text").innerHTML = newTxt; 
+	}
+
+	function toggleBenefitsIcon(){
+		// $(".benefit-accordion").on("click", function(e){
+		// 	if($(this).attr("aria-expanded") == "true"){
+		// 		$(this).find("span").attr("class", "icon ion-ios-add")
+		// 	} else if(($(this).attr("aria-expanded") == "false")) {
+		// 		$(this).find("span").attr("class", "icon ion-ios-remove")
+		// 	}
+		// })
+
+		// e.preventDefault(); 
 	}
 });
 
